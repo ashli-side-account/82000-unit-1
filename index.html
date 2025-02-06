@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!-- ^ Specify the document is HTML5. I believe it's out-of-spec to put this comment above the DOCTYPE so it's below -->
 
-<!-- HTML tag always needs to exist*, lang="en" defines the document as english, of course. -->
 <html lang="en">
 
     <!-- Used to store "invisible" data so-to-speak. -->
@@ -16,68 +14,101 @@
         <title>Ashli's Webpage</title>
     </head>
 
-    <!-- Used to store the main visible content of the site. -->
-    <!-- (Unnecessary to document anything in here currently - it's all simple text tags) -->
     <body>
-        <!-- Technically I should be using <section> here I think? Haven't properly learned it in practice yet. -->
+        <!-- I'm guessing this is okay practice to include a content-ish paragraph in the header? -->
+        <header>
+            <h1>Ashli's Site — Welcome!</h1>
 
-        <h1>Ashli's Site — Welcome!</h1>
-        <p>
-            Welcome! This is my assignment page for Unit 1. (This page, along with everything I'll submit for this class, is not 
-            AI generated. I just write like that)
-        </p>
+            <p>
+                Welcome! This is my assignment page for Unit 1. (This page, along with everything I'll submit for this class, is not 
+                AI generated. I just write like that)
+            </p>
+        </header>
 
-        <h2>Who am I?</h2>
-        <p>
-            My name is Ashli! I'm non-binary, and my pronouns are she/they. I'm primarily a Rust developer, but I've also done work with 
-            JVM languages like Kotlin, functional languages like Haskell, concatenative languages like Factor, etc. I enjoy esolangs 
-            (esoteric programming languages) designed to just be weird or math-y and maybe push the bounds of what
-            should even count as a language. <a href="https://esolangs.org/wiki/Bleh" target="_blank">Here</a> is one of mine! 
-        </p>
-        <p>
-            I'm very sensitive to like... "messy" code so-to-speak. I get very overwhelmed and demotivated by it— As such, 
-            I use a lot of comments written in a tutorial-like manner to ensure I remember what and why different things exist 
-            in my code.
-            For HTML I'll probably not need a <i>ton</i> of comments, because most of the tags are self-describing, but I figured 
-            I'd let you know in case we get into JavaScript or whatnot. (I think you mentioned we wouldn't really touch it though?) 
-        </p>
-        <p>
-            (As a snobby Linux user, I am obligated to mention that I am a Linux user— Arch Linux no less)
-        </p>
+        <!-- Main content body -->
+        <main>
+            <!-- Sections are, well, sections of the document! -->
+            <section>
+                <h2>Introduction & Hobbies</h2>
 
-        <h2>Prior Experience</h2>
-        <p>
-            I already have <i>some</i> knowledge in solo website development, I have my own site which
-            is currently also hosted on GitHub pages, though it's politically charged and blocked on the school wifi.
-            I've been working on migrating it to Codeberg pages, as that's where the majority of my projects, including the 
-            source Svelte code, are hosted. It currently just sends the compiled code to GitHub using an npm task, but 
-            it's really hacky lol.
-        </p>
-        <p>
-            As mentioned prior, I mostly use Codeberg for my repositories, not GitHub. My account can be found 
-            <a href="https://codeberg.org/AshliKatt" target="_blank">here</a>. (Be warned, it's like 90% incomplete Rust projects)
-        </p>
-        <p>
-            I am very comfortable with using basic Git actions, pushing, pulling, creating branches, merging them, rebasing, etc. 
-            I worked on a team for a Minecraft server (primarily Java) for about a year so I'm adept at that kinda stuff and working 
-            on a small team.
-        </p>
+                <!-- 
+                    Okay so previously I used <b> and <i>, these are incorrect*, remember to use <em> and <strong> instead!
+                        
+                    *They're poor for accessibility, they don't properly denote that the word is emphasized or "spoken" strongly,
+                    they purely just change the rendering. This might be useful for visual readability purposes, but so far I've only used
+                    them for actual emphasis, thus <em> and <strong> are more suited to my use cases.
+                -->
 
-        <h2>Why am I taking this class?</h2>
-        <p>
-            Well, the boring answer is "it's required for my degree" but that's <b>LAME</b>. I believe that all classes have value and 
-            that you can always get something out of them! (Even if what you get out of them is "I don't like this subject")
-        </p>
-        <p>
-            My current knowledge of HTML and CSS are from just simple references like W3Schools and the MDN docs for my own site. But,
-            of course, just looking up "how do I do X" every time I need to do X leaves significant gaps in my knowledge. It is also 
-            prone to the <a href="https://xyproblem.info/" target="_blank">XY Problem</a>. Thus, having this class to fill in the inevitable, 
-            huge gaps in my knowlege is immensely helpful, even if I don't often touch web-dev.
-        </p>
-        <p>
-            As for JavaScript on the web, I'm much more confident in it as I've used it for many years with small P5js games on OpenProcessing. 
-            I've also written some absolute nightmare code for my website that got lazily migrated to TypeScript when I switched to Svelte. 
-            I have less experience with backend NodeJS code and such, but we're only doing static pages here so that's probably not relevant.
-        </p>
+                <p>
+                    My name is Ashli! I'm non-binary and my pronouns are she/they.
+                </p>
+
+                <p>
+                    My main interest is computer science and (to a slightly lesser extent) programming. In terms of the latter, I've 
+                    used a variety of languages, from Kotlin to Factor to Haskell to JavaScript to Bash. My experience and comfort
+                    varies, naturally, but Rust has been a stand-out favorite language of mine and is what I write the majority of my 
+                    code in.  
+                </p>
+
+                <p>
+                    One of the biggest areas of programming that I enjoy is <em>language design</em>. I love writing compilers, interpreters,
+                    even just parsers or lexers. One of my <a href="https://codeberg.org/AshliKatt/Alkale" taret="_blank">largest projects</a>
+                    is indeed just a lexer library.
+                </p>
+
+                <p>
+                    With regard to compilers, I've enjoyed <em>esoteric programming languages</em> for a long time— both reading others'
+                    work and making my own! The language I'm most proud of is <a href="https://esolangs.org/wiki/Bleh" target="_blank">Bleh</a>
+                    (incredible name, I know), a language of mine based on bitstrings and pattern matching.
+                </p>
+            </section>
+
+            <section>
+                <h2>Prior Experience</h2>
+
+                <p>
+                    I already have <em>some</em> knowledge in solo website development, I have my own site which is currently hosted 
+                    on Codeberg Pages, though it's a bit politically charged. It was initially written in raw HTML, CSS, and JS, but 
+                    I've switched to using Svelte with Scss and TypeScript as the codebase has grown. (Though I'm planning on migrating 
+                    it further into a custom language I'm working on because I have an insatiatble need to build everything myself)
+                </p>
+
+                <p>
+                    As mentioned, I mostly use Codeberg for my repositories, not GitHub. My account can be found 
+                    <a href="https://codeberg.org/AshliKatt" target="_blank">here</a>. A majority of my repositories are just unfinished Rust
+                    projects, however. Mostly compilers or interpreters.
+                </p>
+                
+                <p>
+                    Additionally, I used to be a volunteer developer on Minecraft server focused on teaching basic programming, (akin to Scratch)
+                    so I'm fairly adept at working with others and using Git. (at least in a small, informal team)
+                </p>
+            </section>
+            
+            <section>
+                <h2>Why am I taking this class?</h2>
+                
+                <p>
+                    Well, the boring answer is "it's required for my degree" but that's a bit of a cop-out. All educational experiences 
+                    have value and you can pretty much always get something out of a class like this! Whether I'm actually a web developer or
+                    not is irrelevant, learning is good!
+                </p>
+                
+                <p>
+                    My current knowledge of HTML and CSS are from just simple references like W3Schools and the MDN docs for developing my 
+                    own site. But, of course, just looking up "how do I do X in CSS" every time I need to do X leaves <strong>significant</strong> 
+                    gaps in my knowledge. It is also prone to the <a href="https://xyproblem.info/" target="_blank">XY Problem</a>. Thus, 
+                    having this class to fill in the inevitable, huge gaps in my knowlege is very helpful!
+                </p>
+                
+                <p>
+                    As for JavaScript, on the other hand, I'm much more confident in it than I am with HTML/CSS. I've used it for over 4 
+                    years in several different environments, including, of course, frontend website development. I feel like most of my 
+                    knowledge gain at the point would be more on the practical side of things, such as learning new libraries or standard modules 
+                    or whatnot. But, of course, JavaScript is full of obscure, disgusting features (like the whole raw-string function call syntax) 
+                    so I'm certain I have gaps there too.
+                </p>
+            </section>                
+        </main>
     </body>
 </html>
