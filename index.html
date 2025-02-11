@@ -8,8 +8,10 @@
     </head>
 
     <body>
-        <nav>
-            <!-- TODO site navigation -->
+        <nav id="site-nav">
+            <a href="./">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <header>
@@ -23,12 +25,18 @@
             <hr>
         </header>
 
-        <!-- TODO navigation for headings within the page -->
-
         <!-- Main content body -->
         <main>
+            <nav id="page-nav">
+                <ul>
+                    <li><a href="#intro">Introduction & Hobbies</a></li>
+                    <li><a href="#experience">Prior Experience</a></li>
+                    <li><a href="#why_take_class">Why am I Taking This Class?</a></li>
+                </ul>
+            </nav>
+
             <section>
-                <h2>Introduction & Hobbies</h2>
+                <h2 id="intro">Introduction & Hobbies</h2>
 
                 <!-- 
                     Okay so previously I used <b> and <i>, these are incorrect*, remember to use <em> and <strong> instead!
@@ -90,7 +98,7 @@
             </section>
 
             <section>
-                <h2>Prior Experience</h2>
+                <h2 id="experience">Prior Experience</h2>
 
                 <p>
                     I already have <em>some</em> knowledge in solo website development, I have my own site which is currently hosted 
@@ -112,7 +120,7 @@
             </section>
             
             <section>
-                <h2>Why am I taking this class?</h2>
+                <h2 id="why_take_class">Why am I taking this class?</h2>
                 
                 <p>
                     Well, the boring answer is "it's required for my degree" but that's a bit of a cop-out. All educational experiences 
@@ -138,8 +146,8 @@
         </main>
 
         <footer>
-            <!-- TODO Absolute link to dallas college -->
-            <!-- TODO mailto: to webmaster (me) -->
+            <a href="mailto:a@b.c">Email the Webmaster</a>
+            <a href="https://www.dallascollege.edu/">Dallas College</a>
         </footer>
     </body>
 </html>
